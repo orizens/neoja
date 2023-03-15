@@ -15,7 +15,7 @@ export function Gallery({ children, ...props }) {
   return (
     <Grid
       justifyContent="center"
-      gridTemplateColumns="repeat(2, auto)"
+      gridTemplateColumns={["1fr", "repeat(2, auto)"]}
       justifyItems="center"
       gridGap="6"
       {...props}
