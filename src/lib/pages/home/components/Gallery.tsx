@@ -30,7 +30,9 @@ export function Media({ src, description, to, children }) {
       <CardBody>
         <Image src={src} h="56" alt={to} borderRadius="lg" />
         <Stack mt="6" spacing="3">
-          <Heading size="md">{children}</Heading>
+          <Heading size="md" textTransform="capitalize">
+            {children}
+          </Heading>
           <Text>{description}</Text>
         </Stack>
       </CardBody>
@@ -50,7 +52,7 @@ export function Video({ src }) {
       <CardBody>
         <video ref={videoRef} src={src} width="full" loop />
         <Stack mt="6" spacing="3">
-          <Heading size="md">some heading</Heading>
+          <Heading size="md">Focus</Heading>
         </Stack>
       </CardBody>
     </Card>
