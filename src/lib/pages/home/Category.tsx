@@ -1,12 +1,13 @@
 import { Grid, Heading, Icon } from "@chakra-ui/react";
 import { HiArrowSmLeft } from "react-icons/hi";
-import { Link } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 import { Gallery, Video } from "./components/Gallery";
 import { videos } from "./store";
 
 export function Category({ name }) {
-  const items = videos[name];
+  const data = useLoaderData();
+  const items = data?.[name] ?? videos[name];
 
   return (
     <Grid textAlign="center" gap={2}>

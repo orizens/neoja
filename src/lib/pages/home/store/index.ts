@@ -23,7 +23,7 @@ export const links = [
 
 export const videos = {
   focus: [
-    "https://media.istockphoto.com/id/1348234011/video/tree-park-forest-fog-sun-magical-nature-mist-morning-leaf.mp4?s=mp4-640x640-is&k=20&c=qpB3652YGUxrwmeUiq0DUXjzuS3SPXAkvNpFCTcvFgw=",
+    "/videos/focus/example.mp4",
     "https://media.istockphoto.com/id/1348234011/video/tree-park-forest-fog-sun-magical-nature-mist-morning-leaf.mp4?s=mp4-640x640-is&k=20&c=qpB3652YGUxrwmeUiq0DUXjzuS3SPXAkvNpFCTcvFgw=",
     "https://media.istockphoto.com/id/1348234011/video/tree-park-forest-fog-sun-magical-nature-mist-morning-leaf.mp4?s=mp4-640x640-is&k=20&c=qpB3652YGUxrwmeUiq0DUXjzuS3SPXAkvNpFCTcvFgw=",
     "https://media.istockphoto.com/id/1348234011/video/tree-park-forest-fog-sun-magical-nature-mist-morning-leaf.mp4?s=mp4-640x640-is&k=20&c=qpB3652YGUxrwmeUiq0DUXjzuS3SPXAkvNpFCTcvFgw=",

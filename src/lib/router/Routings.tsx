@@ -8,35 +8,36 @@
  * - https://reactrouter.com/docs/en/v6/upgrading/v5#note-on-link-to-values
  */
 
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, RouterProvider } from "react-router-dom";
 
 import RequireAuth from "lib/components/auth/RequireAuth";
 import Page404 from "lib/pages/404";
 
-import { routes, privateRoutes } from "./routes";
+import { router, privateRoutes } from "./routes";
 
-const Routings = () => {
-  return (
-    <Routes>
-      {routes.map((routeProps) => (
-        <Route {...routeProps} key={routeProps.path as string} />
-      ))}
-      {privateRoutes.map(({ element, ...privateRouteProps }) => (
-        <Route
-          element={
-            <RequireAuth
-              redirectTo={`/login?redirectTo=${privateRouteProps.path}`}
-            >
-              {element}
-            </RequireAuth>
-          }
-          {...privateRouteProps}
-          key={`privateRoute-${privateRouteProps.path}`}
-        />
-      ))}
-      <Route path="*" element={<Page404 />} />
-    </Routes>
-  );
-};
+// const Routings = () => {
+//   return (
+//     <Routes>
+//       {routes.map((routeProps) => (
+//         <Route {...routeProps} key={routeProps.path as string} />
+//       ))}
+//       {privateRoutes.map(({ element, ...privateRouteProps }) => (
+//         <Route
+//           element={
+//             <RequireAuth
+//               redirectTo={`/login?redirectTo=${privateRouteProps.path}`}
+//             >
+//               {element}
+//             </RequireAuth>
+//           }
+//           {...privateRouteProps}
+//           key={`privateRoute-${privateRouteProps.path}`}
+//         />
+//       ))}
+//       <Route path="*" element={<Page404 />} />
+//     </Routes>
+//   );
+// };
+const Routings = () => <RouterProvider router={router} fallbackElement={<p>Loading...</p>} />;
 
 export default Routings;

@@ -9,7 +9,7 @@ import {
   Button,
 } from "@chakra-ui/react";
 import { useRef } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 export function Gallery({ children, ...props }) {
   return (
@@ -42,15 +42,20 @@ export function Media({ src, description, to, children }) {
 
 export function Video({ src }) {
   const videoRef = useRef<HTMLVideoElement>();
+  const navigate = useNavigate();
   const play = async () => {
     await videoRef.current.requestFullscreen();
     videoRef.current.play();
   };
 
+  const onPlayEnd = () => {
+    navigate('/')
+  }
+
   return (
     <Card maxW="sm" onClick={play} as={Button} h="auto">
       <CardBody>
-        <video ref={videoRef} src={src} width="full" loop />
+        <video ref={videoRef} src={src} width="full" onEnded={onPlayEnd} />
         <Stack mt="6" spacing="3">
           <Heading size="md">Focus</Heading>
         </Stack>
