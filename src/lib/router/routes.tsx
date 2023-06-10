@@ -11,7 +11,7 @@ const routes: Array<PathRouteProps> = [
   {
     path: "/categories",
     loader: async () => {
-      const response = await fetch('/public/videos.json');
+      const response = await fetch('/videos.json');
       return await response.json();
     },
     element: <Categories />,
