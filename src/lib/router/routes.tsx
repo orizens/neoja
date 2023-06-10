@@ -3,21 +3,6 @@ import { createBrowserRouter, PathRouteProps } from "react-router-dom";
 import Home from "lib/pages/home";
 import Categories from "lib/pages/home/components/Categories";
 
-const routes: Array<PathRouteProps> = [
-  {
-    path: "/",
-    element: <Home />,
-  },
-  {
-    path: "/categories",
-    loader: async () => {
-      const response = await fetch('/videos.json');
-      return await response.json();
-    },
-    element: <Categories />,
-  },
-];
-
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -26,7 +11,7 @@ export const router = createBrowserRouter([
   {
     path: "/categories",
     loader: async () => {
-      const response = await fetch('/public/videos.json');
+      const response = await fetch('/videos.json');
       return await response.json();
     },
     element: <Categories />,
