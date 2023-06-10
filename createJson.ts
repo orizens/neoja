@@ -19,7 +19,7 @@ export function createFilePathsJSON(directory, outputPath) {
         const dirName = path.relative(directory, currentPath);
         const fullFilePath = path.join(currentPath, file);
         console.log({ currentPath, dirName, fullFilePath })
-        directories[basePath].push(fullFilePath);
+        directories[basePath].push(fullFilePath.replace('public/', ''));
       }
     });
   }
