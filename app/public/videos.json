@@ -1,0 +1,10 @@
+{
+  "calm": [
+    "videos/calm/example.mp4",
+    "videos/calm/galaxy.mp4"
+  ],
+  "focus": [
+    "videos/focus/example.mp4",
+    "videos/focus/galaxy.mp4"
+  ]
+}
