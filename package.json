@@ -4,7 +4,8 @@
   "private": true,
   "author": "sozonome",
   "scripts": {
-    "dev": "vite",
+    "dev": "npm start",
+    "start": "vite",
     "build": "yarn type-check && vite build",
     "build:turbo": "npx turbo build",
     "serve": "vite preview",
@@ -25,12 +26,14 @@
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
     "@fontsource/plus-jakarta-sans": "^4.5.11",
+    "eslint-plugin-unused-imports": "^2.0.0",
     "framer-motion": "^8.5.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
     "react-icons": "^4.8.0",
-    "react-router-dom": "^6.9.0"
+    "react-router-dom": "^6.9.0",
+    "vite-plugin-mkcert": "^1.15.0"
   },
   "devDependencies": {
     "@commitlint/config-conventional": "^17.4.4",

@@ -1,7 +1,13 @@
-import { Grid, Heading, Text } from "@chakra-ui/react";
+import { Button, Grid, Heading, Text } from "@chakra-ui/react";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
+// setTimeout(() => {
+//   document.body.requestFullscreen();
+// }, 500)
+
 const Home = () => {
+
   return (
     <Grid gap={4}>
       <Grid textAlign="center" gap={4}>
