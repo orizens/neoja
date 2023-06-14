@@ -23,9 +23,9 @@
     "noFallthroughCasesInSwitch": true
   },
   "include": [
-    "src",
+    "../src",
     "electron",
-    "src/main.tsx"
+    "../src/main.tsx"
   ],
   "references": [
     {

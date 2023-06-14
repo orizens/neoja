@@ -14,8 +14,9 @@ createFilePathsJSON(directoryPath, outputPath);
 export default defineConfig({
   resolve: {
     alias: {
-      lib: resolve(__dirname, "src/lib"),
-      routes: resolve(__dirname, "src/routes"),
+      src: resolve(__dirname, "../src"),
+      lib: resolve(__dirname, "../src/lib"),
+      routes: resolve(__dirname, "../src/routes"),
     },
   },
   plugins: [
