@@ -4,8 +4,8 @@
   "private": true,
   "author": "sozonome",
   "scripts": {
-    "dev": "npm start",
-    "start": "vite",
+    "dev": "vite",
+    "start": "cd app && npm start",
     "build": "yarn type-check && vite build",
     "build:turbo": "npx turbo build",
     "serve": "vite preview",
