@@ -25,7 +25,7 @@ export function Category({ name }) {
       </Heading>
       <Gallery>
         {items?.map((url, index) => (
-          <Video key={`${name}-${index}-${url}`} src={url} />
+          <Video key={`${name}-${index}-${url}`} src={url} category={name} />
         ))}
       </Gallery>
     </Grid>

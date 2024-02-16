@@ -1,7 +1,9 @@
+import forest from './forest.png';
+
 export const links = [
   [
     "focus",
-    "https://images.unsplash.com/photo-1448375240586-882707db888b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Zm9yZXN0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+    '/images/forest.png',
     "A series of guided meditations to help achieve a higher level of focus",
   ],
   [

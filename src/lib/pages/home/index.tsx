@@ -9,7 +9,10 @@ import { Link } from "react-router-dom";
 const Home = () => {
 
   return (
-    <Grid gap={4}>
+    <Grid gap={4}
+    as={Link}
+        to="/categories"
+    >
       <Grid textAlign="center" gap={4}>
         <Heading fontSize="9xl">akto</Heading>
         <Grid opacity=".5">
@@ -17,10 +20,8 @@ const Home = () => {
           <Heading>akto.com</Heading>
         </Grid>
         <Text
-          as={Link}
           fontSize="4xl"
           color="white"
-          to="/categories"
           textDecoration="underline"
         >
           Touch to start your break

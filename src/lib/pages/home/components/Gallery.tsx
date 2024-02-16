@@ -40,21 +40,21 @@ export function Media({ src, description, to, children }) {
   );
 }
 
-export function Video({ src }) {
+export function Video({ src, category }) {
   const videoRef = useRef<HTMLVideoElement>();
   const navigate = useNavigate();
+
   const play = async () => {
     await videoRef.current.requestFullscreen();
+    writeStorage(category, src);
     videoRef.current.currentTime = 0;
     await videoRef.current.play();
   };
   
   const onPlayEnd = () => {
-    document.body.requestFullscreen();
-    navigate("/");
+    navigate(`/rating?category=${category}&file=${src}`);
   };
   const videoName = src?.split("\\").pop().split(".").shift();
-
   return (
     <Card maxW="sm" onClick={play} as={Button} h="auto">
       <CardBody>
@@ -69,5 +69,22 @@ export function Video({ src }) {
         </Stack>
       </CardBody>
     </Card>
+  );
+}
+
+const writeStorage = (category, file) => {
+  const aktoStorage = localStorage.getItem('akto');
+  const result = aktoStorage ? JSON.parse(aktoStorage as any) : {};
+  if (!result[category]) {
+    result[category] = {};
+  }
+  if (!result[category][file]){
+    result[category][file] = 1;
+  } else {
+    result[category][file] = result[category][file] + 1
+  }
+  localStorage.setItem(
+    'akto',
+    JSON.stringify(result)
   );
 }
